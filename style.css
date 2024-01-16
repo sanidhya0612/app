@@ -16,3 +16,17 @@
     border:1px solid white;
 
 }
+
+.footer{
+    position: fixed;  
+    bottom: 0;  
+    width: 100%;  
+    background-color: #5bc0de;
+    color: white;  
+    text-align: center;  
+}
+
+.modal-dialog
+{
+    width:90%;
+}

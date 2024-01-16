@@ -20,11 +20,34 @@
                 <button class="btn btn-info">INSTRUCTIONS</button>
             </div>
             <br>
-            <br>
             <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="startGame()" id="game">PLAY</button>
-            <br><br>
+            <br>
             <h3 id="btn btn-primary"></h3>
             <div id="canvas"></div>
+            <button onclick="restart()"  id="restart" class="btn btn-danger"></button>
+
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">&times;</button>
+                            <h4>INSTRUCTIONS</h4>
+                        </div>
+                        <div class="modal-body">
+                            <ol>
+                                <li>After starting the game move the cursor up and down, according to the placement of the ball.</li>
+                                <li>If you miss computer will get 1 point and the game wil restart.</li>
+                                <li>If you do not miss the speed will increase every time after touching the ball with the racket.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="footer">
+            <h4>
+                Created by Sanidhya
+              </h4>
+              </div>
         </center>
         <script src="main.js"></script>
     </body>
