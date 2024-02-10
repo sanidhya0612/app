@@ -17,15 +17,16 @@
         <center>
             <div class="btn btn-info heading">
                 <h3 >AI PING PONG</h3>
-                <button class="btn btn-info">INSTRUCTIONS</button>
+                <button class="btn btn-info" data-toggle="modal" data-target="#myModal">INSTRUCTIONS</button>
             </div>
             <br>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="startGame()" id="game">PLAY</button>
+            <button class="btn btn-primary" id="game">Play</button>
             <br>
             <h3 id="btn btn-primary"></h3>
+            
+            <button onclick="restart()"  id="restart" class="btn btn-danger">Restart</button>
             <div id="canvas"></div>
-            <button onclick="restart()"  id="restart" class="btn btn-danger"></button>
-
+                
             <div id="myModal" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -36,7 +37,9 @@
                         <div class="modal-body">
                             <ol>
                                 <li>After starting the game move the cursor up and down, according to the placement of the ball.</li>
+                                <br>
                                 <li>If you miss computer will get 1 point and the game wil restart.</li>
+                                <br>
                                 <li>If you do not miss the speed will increase every time after touching the ball with the racket.</li>
                             </ol>
                         </div>

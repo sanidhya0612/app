@@ -17,6 +17,15 @@
 
 }
 
+#game{
+    margin-top: 20px;
+}
+
+#restart
+{
+    margin-bottom: 20px;
+}
+
 .footer{
     position: fixed;  
     bottom: 0;  
@@ -29,4 +38,12 @@
 .modal-dialog
 {
     width:90%;
+}
+
+canvas
+{
+    border:6px;
+    border-style: double dashed;
+    border-color: orangered;
+    margin-bottom: 60px;
 }
