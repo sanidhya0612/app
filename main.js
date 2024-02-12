@@ -1,3 +1,6 @@
+var wristX = "";
+var wristY = "";
+var score = "";
 
 /*created by prashant shukla */
 
@@ -26,8 +29,19 @@ function setup(){
   canvas.parent('canvas');
   video = createCapture(VIDEO);
 	video.size(700,600);
-  video.hide();
   poseNet = ml5.poseNet(video, modelLoaded);
+  poseNet.on('pose', gotPoses);
+}
+
+function gotPoses(results)
+{
+  if(results.length>0)
+  {
+    console.log(results);
+    wristX = results[0].pose.wrist.x;
+    wristY = results[0].pose.wrist.y;
+    score = results(wristx,wristy);
+  }
 }
 
 function modelLoaded()
@@ -36,6 +50,13 @@ function modelLoaded()
 }
 
 function draw(){
+
+  if(score>0.2)
+  {
+    fill("#013220");
+    stroke("#013220");
+    circle(wristX, wristY, 2);
+  }
 
   image(video,0,0,700,600);
  background(0); 
